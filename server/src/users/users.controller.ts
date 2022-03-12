@@ -15,17 +15,19 @@ export class UsersController {
   }
 
   @Get()
-  async findAll(): Promise<User[]> {
+  async findAll(): Promise<UserDto[]> {
     return this.usersService.findAll();
   }
 
   @Get(':id')
-  async findOne(@Param('id') id: string): Promise<User> {
+  async findOne(@Param('id') id: string): Promise<UserDto> {
     return this.usersService.findOne(id);
   }
+}
 
-  @Delete(':id')
-  async delete(@Param('id') id: string) {
-    return this.usersService.delete(id);
-  }
+export interface UserDto {
+  firstname: string,
+  lastname: string,
+  email: string,
+  description: string,
 }
