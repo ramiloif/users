@@ -33,7 +33,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Users List
           </Typography>
-          <Button color="inherit" onClick={openForm}>Create User</Button>
+          <Button id="create_user_btn" color="inherit" onClick={openForm}>Create User</Button>
         </Toolbar>
       </AppBar>
     </Box>

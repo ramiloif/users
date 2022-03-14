@@ -112,14 +112,16 @@ export default function CreateUser() {
     }
 
     return(
-    <Box sx={{ bgcolor: '#c5cae9' }}>
+    <Box sx={{ bgcolor: '#c5cae9' }}
+    id="create_form"
+    >
      <form style={{}}>
     <FormControl sx={{ m: 3 }} error={false} variant="standard">
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Create User
         </Typography>
 
-        {success && <Alert severity="success">User created successfully!</Alert>}
+        {success && <Alert id="create_success" severity="success">User created successfully!</Alert>}
 
         <TextField
             disabled={success}
@@ -183,6 +185,7 @@ export default function CreateUser() {
 
         {!success && <Stack spacing={2} direction="row"> 
             <Button 
+                id="submit_form"
                 variant="contained" 
                 onClick={handleSubmit} >Create</Button>
             <Button
